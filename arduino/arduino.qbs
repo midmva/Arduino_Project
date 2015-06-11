@@ -21,8 +21,6 @@ Project{
             hardwarePath+SAM+"variants/arduino_due_x/",
             hardwarePath+SAM+"libraries/SPI/",
             hardwarePath+SAM+"cores/arduino/avr/",
-            libraryPath+"FreeRTOS_ARM/",
-            libraryPath+"FreeRTOS_ARM/utility/"
         ]
         cpp.includePaths: includePaths
         property var defines: [
@@ -112,18 +110,7 @@ Project{
             files: ["*.c","*.cpp"]
             fileTags: ['s']
         }
-        Group {
-            name: "FreeRTOS"
-            prefix: includePaths[9]
-            files: ["*.c","*.cpp"]
-            fileTags: ['s']
-        }
-        Group {
-            name: "FreeRTOS_inc"
-            prefix: includePaths[10]
-            files: ["*.c","*.cpp"]
-            fileTags: ['s']
-        }
+
 
         Rule {
             id: compiler
@@ -244,7 +231,6 @@ Project{
         }
     }
 }
-
 
 
 
